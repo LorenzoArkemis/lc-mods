@@ -15,21 +15,21 @@ click it to see the command it ran.
 
 ## Install
 
-The mod is loaded from its folder through `CLAUDE_CODE_PLUGIN_DIRS` in
-`~/.claude/settings.json` (paths separated by `:`):
+At the prompt of a Claude Code terminal session:
 
-```json
-{
-  "env": {
-    "CLAUDE_CODE_PLUGIN_DIRS": "~/workspace/lc-mods/usage:~/workspace/lc-mods/call-history"
-  }
-}
+```
+/plugin install call-history --marketplace LorenzoArkemis/lc-mods
 ```
 
-The setting is read when a session starts, so restart Claude Code after adding
-it. While a session runs, saving a file in the folder reloads the mod.
+Answer `y` to add the marketplace, then pick a scope (user is first). From a
+shell instead:
 
-For a single session instead: `claude --plugin-dir ~/workspace/lc-mods/call-history`.
+```sh
+claude plugin install call-history --marketplace LorenzoArkemis/lc-mods
+```
+
+In the desktop app, where `/plugin` does not run: click + next to the prompt
+box, then Plugins, Add marketplace with `LorenzoArkemis/lc-mods`, then Add plugin.
 
 ## Use
 
@@ -112,9 +112,21 @@ and bold, so it follows your terminal theme rather than Claude Code's.
 
 ## Develop
 
+Run the mod from a checkout, reloading on every save:
+
+```sh
+claude --plugin-dir ~/workspace/lc-mods/call-history
+```
+
+Checks:
+
 ```sh
 cd ~/workspace/lc-mods/call-history
 claude plugin validate .   # manifest and hooks as the engine reads them
 npx -p typescript tsc -p . # type-check (types appear after the first load)
 claude plugin test .       # runs tests/*.test.tsx
 ```
+
+## License
+
+MIT, see [LICENSE](../LICENSE).

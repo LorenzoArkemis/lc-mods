@@ -1,1 +1,11 @@
-{ "name": "call-history", "version": "0.1.0", "description": "A pane listing the session's recent tool calls, skills and slash commands", "types": "./types/index.d.ts" }
+{
+  "name": "call-history",
+  "version": "0.1.0",
+  "description": "A pane listing the session's recent tool calls, skills and slash commands",
+  "author": {
+    "name": "Lorenzo Cocciarelli"
+  },
+  "repository": "https://github.com/LorenzoArkemis/lc-mods",
+  "license": "MIT",
+  "types": "./types/index.d.ts"
+}
