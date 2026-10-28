@@ -1,0 +1,17 @@
+{
+  "name": "lc-mods",
+  "description": "Claude Code mods by Lorenzo Cocciarelli",
+  "owner": { "name": "Lorenzo Cocciarelli" },
+  "plugins": [
+    {
+      "name": "call-history",
+      "source": "./call-history",
+      "description": "A pane listing the session's recent tool calls, skills and slash commands"
+    },
+    {
+      "name": "usage",
+      "source": "./usage",
+      "description": "Context fill, rate-limit windows and session cost in the status line"
+    }
+  ]
+}

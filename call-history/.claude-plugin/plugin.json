@@ -1,0 +1,1 @@
+{ "name": "call-history", "version": "0.1.0", "description": "A pane listing the session's recent tool calls, skills and slash commands", "types": "./types/index.d.ts" }
